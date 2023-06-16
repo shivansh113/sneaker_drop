@@ -1,11 +1,23 @@
 import requests 
-import json
+from bs4 import BeautifulSoup
 
-url = "https://api.nike.com/cic/browse/v2?queryid=products&anonymousId=86D0C4D258FACC7CE8F8DD55D50C62F2&country=ca&endpoint=%2Fproduct_feed%2Frollup_threads%2Fv2%3Ffilter%3Dmarketplace(CA)%26filter%3Dlanguage(en-GB)%26filter%3DemployeePrice(true)%26filter%3DattributeIds(16633190-45e5-4830-a068-232ac7aea82c)%26searchTerms%3Djordan%26anchor%3D48%26consumerChannelId%3Dd9a5bc42-4b9c-4976-858a-f159cf99c647%26count%3D24&language=en-GB&localizedRangeStr=%7BlowestPrice%7D%E2%80%94%7BhighestPrice%7D"
+url = 'https://www.nike.com/ca/w/shoes-y7ok?q=jordan'
+
+site = requests.get(url)
+soup = BeautifulSoup(site.text, 'html.parser')
+
+items = soup.find_all('div', {'class': 'product-card__body'})
+prices = soup.find_all('div', {'class': 'product-card__price'})
+
+item_store = []
+price_store = []
+
+for item in items:
+  item_store.append(item.find('a', {'class': 'product-card__link-overlay'}).text)
+
+for price in prices:
+  price_store.append(price.find('div', {'class': 'product-price ca__styling is--current-price css-11s12ax'}).text)
 
 
-html = requests.get(url=url)
-out = json.loads(html.text)
-
-for item in out['data']['products']['products']:
-    print(item)
+for i in range(len(item_store)):
+  print(i+1,': ', item_store[i], " ", price_store[i])

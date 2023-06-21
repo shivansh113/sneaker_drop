@@ -14,7 +14,7 @@ num_scrolls = 5
 for i in range(num_scrolls):
     driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
 
-    time.sleep(1.5)
+    time.sleep(3)
 
 page_source = driver.page_source
 

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneaker Drop</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Drops</h1>
+    
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Next Sneaker?">
+        <button class="search-button">
+          <i class="fas fa-search"></i>
+        </button>
+    </div>
+    <div class="dropdown"> 
+        <button class="filter-sort">Filter</button>
+        <div class="dropdown-options">
+            <a href="#">Jordan</a>
+            <a href="#">Dunks</a>
+            <a href="#">Air force 1</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="filter-sort">Sort</button>
+        <div class="dropdown-options">
+            <a href="#">Price High to Low</a>
+            <a href="#">Price Low to High</a>
+        </div>
+    </div>
+
+    <ul>
+        {% for item, price, image, gender_tag in items %}
+        <li>
+            <img src="{{ image }}" alt="Product Image">
+            <h3>{{ item }}</h3>
+            <p>Price: {{ price }}</p>
+            <p>Tag: {{ gender_tag }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+h1{
+    color: cornflowerblue;
+    text-align: center;
+    margin: 0;
+    font-size: 70px;
+    padding-bottom: 5%;
+    text-shadow: 2px 2px 4px ;
+    
+    
+}
+body{
+    background-color: white;
+    
+}
+
+.search-container {
+    display: flex;
+    float: left;
+    width: 400px;
+    height: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: white;
+    color: slategray;
+    font-family: gill sans, sans-seriff;
+  }
+  
+  .search-button {
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .search-button:hover {
+    background-color: rgb(11, 50, 123);
+  }
+  
+  .fa-search {
+    font-size: 18px;
+  }
+
+.dropdown{
+    
+    color: antiquewhite;
+    float: left;
+    width: 50px;
+    height: 150px;
+    margin-left: 17%;
+}
+
+.filter-sort{
+    border: none;
+    width: 150px;
+    height: 30px;
+    border-radius: 10px;
+    padding-right: 20%;
+    font-size: medium;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    font-weight: 900;
+    font-family: georgia, serif;  
+    color: white;      
+}
+
+.dropdown-options{
+    display: none;
+    position: absolute;
+    overflow: auto;
+    width: 150px;
+    background-color: white;
+    color: slategray;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px 0px;
+}
+
+
+.dropdown:hover .dropdown-options{
+    display: block;
+}
+
+.dropdown-options a {
+    display: block;
+    color: slategray;
+    padding: 5px;
+    text-decoration: none;
+    padding: 10px 10px;
+}
+
+/* partial product css idea      */
+
+#product-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.product img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.product-title {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-description {
+  font-size: 14px;
+}

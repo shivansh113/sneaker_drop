@@ -27,9 +27,7 @@ pip install -r requirements.txt
 Once you have the project locally, run the server using the following command:
 
 ```
-
 py manage.py runserver
-
 ```
 
 Allow the server a minute to load the website using Selenium to scrape the required data.

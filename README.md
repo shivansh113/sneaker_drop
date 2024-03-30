@@ -1,6 +1,6 @@
 # Sneaker Drop
 
-A web application to help you scrape certain websites to see what sneakers have been newly released.
+A web application to help you scrape certain websites to see what sneakers have been newly released. Utlizes the Django framework to help build my project. With a python backend with reliance on the BeautifulSoup, Requests and the Selenium library to assist with the scraping process. 
 ## Tech Stack
 
 <div>

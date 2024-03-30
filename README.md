@@ -1,4 +1,4 @@
-# Project Name
+# Sneaker Drop
 
 A web application to help you scrape certain websites to see what sneakers have been newly released.
 ## Tech Stack

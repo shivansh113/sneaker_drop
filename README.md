@@ -21,3 +21,5 @@ Simply pull the repository.
 Once you have the project locally, in the terminal use py manage.py runserver to run the server locally and give it a minute or so to load the website using Selenium to help us scrape the website.
 
 
+> **_NOTE:_**  The code is not meant for extensive use and hasn't been updated.
+
